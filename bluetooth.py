@@ -628,7 +628,7 @@ bt_layout = dbc.Container([
         ),
     ]),
     dbc.Row([
-    html.Div("        The data presented in Graphs 1, 4-6 corresponds to the period between January 10th and February 10th. Graphs 2-3 and 7-8 display data recorded between February 1st and February 28th.",
+    html.Div("        The data presented in Graphs 1 and 4-6 corresponds to the period between January 10th and February 10th 2023. Graphs 2-3 and 7-8 display data recorded between February 1st and February 28th 2023.",
             style={
                 #'font-family': 'Arial, sans-serif',
                 'font-size': '12px',"justify-content": "center", "align-items": "center"#, "margin-bottom": "-5px"
@@ -698,21 +698,21 @@ bt_layout = dbc.Container([
         dcc.Graph(id='speed-vs-time-graph5', style={'width': '400px', 'height': '300px','margin-left': '-50px', 'margin-right': '-50px'}),
         dcc.Graph(id='speed-vs-time-graph3', style={'width': '400px', 'height': '300px','margin-left': '-40px', 'margin-right': '-50px'})
         ]),
-    dbc.Row([
-    html.P([
-        html.Ul([
-        html.Li(["From the graph1"],style={'font-size': '12px'}),
-        html.P(["It was found that the trend of this route is that the vehicle speed is very slow in the evening (traffic congestion).", html.Br(),
-                       "This is due to the fact that in the evening, many vehicles need to use this route.",html.Br(),
-                       "Moreover, there are converging points of cars from the shortcut roads of Sukhumvit 22, 24, and 26 to the expressway at the Sunlakakon intersection.",html.Br(),
-                       "Some also need to turn onto Sukhumvit Road, causing the traffic to move slowly."],style={'font-size': '10px'}),
-        html.Li(["From the graph2"],style={'font-size': '12px'}),
-        html.Li(["From the graph3"],style={'font-size': '12px'}),
-        html.Li(["From the graph4"],style={'font-size': '12px'})
-        ])
+    # dbc.Row([
+    # html.P([
+    #     html.Ul([
+    #     html.Li(["From the graph1"],style={'font-size': '12px'}),
+    #     html.P(["It was found that the trend of this route is that the vehicle speed is very slow in the evening (traffic congestion).", html.Br(),
+    #                    "This is due to the fact that in the evening, many vehicles need to use this route.",html.Br(),
+    #                    "Moreover, there are converging points of cars from the shortcut roads of Sukhumvit 22, 24, and 26 to the expressway at the Sunlakakon intersection.",html.Br(),
+    #                    "Some also need to turn onto Sukhumvit Road, causing the traffic to move slowly."],style={'font-size': '10px'}),
+    #     html.Li(["From the graph2"],style={'font-size': '12px'}),
+    #     html.Li(["From the graph3"],style={'font-size': '12px'}),
+    #     html.Li(["From the graph4"],style={'font-size': '12px'})
+    #     ])
 
-    ])
-    ]),
+    # ])
+    # ]),
 
     dbc.Row([
     html.Div(id='lowest7'),
@@ -754,17 +754,17 @@ bt_layout = dbc.Container([
     ]),
 
     
-    dbc.Row([
-    html.P([
-        html.Ul([
-        html.Li(["From the graph1,...."],style={'font-size': '10px'}),
-        html.Li(["From the graph2,...."],style={'font-size': '10px'}),
-        html.Li(["From the graph3,...."],style={'font-size': '10px'}),
-        html.Li(["From the graph4,...."],style={'font-size': '10px'})
-        ])
+    # dbc.Row([
+    # html.P([
+    #     html.Ul([
+    #     html.Li(["From the graph1,...."],style={'font-size': '10px'}),
+    #     html.Li(["From the graph2,...."],style={'font-size': '10px'}),
+    #     html.Li(["From the graph3,...."],style={'font-size': '10px'}),
+    #     html.Li(["From the graph4,...."],style={'font-size': '10px'})
+    #     ])
 
-    ])
-    ]),
+    # ])
+    # ]),
 
 
     dbc.Row([
