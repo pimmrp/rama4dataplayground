@@ -20,7 +20,7 @@ pd.options.plotting.backend = "plotly"
 # button = html.Button('DOWNLOAD DATA FROM BLUETOOTH SENSORS', id='download-button')
 
 datatable = {'Point': ['1', '2', '3','4','5'],
-        'Name': ['Kasemrat Intersection','Rama IV Intersection','Khlong Toei intersection','Na Ranong Intersection','Sunlakakon Intersection'],
+        'Name': ['Kasem Rat Intersection','Rama IV Intersection','Khlong Toei intersection','Na Ranong Intersection','Sunlakakon Intersection'],
         }
 dftable = pd.DataFrame(datatable)
 dftable.style.set_properties(**{'text-align': 'center'})
@@ -64,7 +64,7 @@ info_layout = html.Div(
         children=[
             html.P(
                     ['     This project is a part of the Rama 4 Model that utilizes traffic data from January-February 2566 obtained from Bluetooth sensors, NDRS sensors,',html.Br(),
-                    'and Traffic Signal sensors installed in the Rama 4 Model project. The data was collected at the intersection of Rama 4 Road and Kasemrat Road,',html.Br(),
+                    'and Traffic Signal sensors installed in the Rama 4 Model project. The data was collected at the intersection of Rama 4 Road and Kasem Rat Road,',html.Br(),
                      'as well as on Rama 4 Road in the Khlong Toei district, to create a Data Playground that includes visualization of the data analysis.',html.Br(),'The areas are shown in the table below.'])
         ]
         
@@ -84,7 +84,8 @@ info_layout = html.Div(
         dash_table.DataTable(
         id='table',
         columns=[{'name': i, 'id': i} for i in dftable.columns],
-        data=dftable.to_dict('records')#,
+        data=dftable.to_dict('records'),#,
+        style_cell={'textAlign': 'center','font-size': '16px'}
         #style={"margin-bottom": "60px"}
         ),
         ]),
@@ -114,7 +115,7 @@ info_layout = html.Div(
         },
         children=[
             html.Li(
-                    ['There is data from 3 sensors located at major intersections in Nakhon Ratchasima, Khlong Toei, and Kasemrat.'
+                    ['Display data from the 3 main junction sensors, including those at Ranong, Khlong Toei, and Kasem Rat.'
                      ],style={'font-size':'14px'}),
             html.Li(
                     ['The sensors will detect the status of traffic lights in all formats at those intersections, with data from February 2023.'
@@ -146,7 +147,7 @@ info_layout = html.Div(
                     ['There are 5 sensor points in the vicinity of the 5 aforementioned intersections on the table.'
                      ],style={'font-size':'14px'}),
             html.Li(
-                    ['The data includes the number and type of vehicles detected by cameras during the period of sufficient light, which is data from January 2023 between 6:00 am and 1:00 pm.'
+                    ['The data includes the number and type of vehicles detected by cameras during the period of sufficient light, which is data from January 2023 between 6:00 am and 7:00 pm.'
         ],style={'font-size':'14px'}),
         ]
         
@@ -176,7 +177,7 @@ info_layout = html.Div(
                     ['There is data from sensors on the main route between the 5 aforementioned intersections on the table.'
                      ],style={'font-size':'14px'}),
             html.Li(
-                    ['The sensors will detect the speed of passing cars every 5 minutes, with data from January-February 2023.'
+                    ['The sensors will detect the speed of passing vehicles every 5 minutes, with data from January-February 2023.'
         ],style={'font-size':'14px'}),
         ]
         
@@ -187,8 +188,24 @@ info_layout = html.Div(
     dbc.Row([
     html.Div([
         html.A("Download file", href='https://github.com/pimmrp/Rama4-dataplayground')
-    ],style={'font-size':'30px',"margin-top": "50px"})
+    ],style={'font-size':'30px',"margin-top": "50px","margin-bottom":"100px"})
 
 
+    ]),
+
+    dbc.Row([
+    dbc.Col([
+    html.H5 (["Designed and Developed by:"]),
+    html.Div(["Pawat Thubthimthed",html.Br(),"Roypim Sarikabut"],style={'font-size':'14px',"margin-bottom":"20px"}),
+    ]),
+    dbc.Col([
+    html.H5 (["Acknowledgement:"],style={"margin-bottom":"20px"}),
+    html.Div(["Assoc. Prof. Chaodit Aswakul, Ph.D.",html.Br(),"Natt Visavarungroj",html.Br(),"Kittipat Saengkaenpetch",html.Br(),"Meechai Homchan",html.Br(),"Siravit Kwankajornkeat",html.Br(),"Phoo Phoo Thet Lyar Tun"],style={'font-size':'14px'}),
     ])
+    
+
+
+    ],style={#"text-align": "right",
+             "margin-bottom":"50px"})
+
 ])

@@ -21,7 +21,7 @@ app_tabs = html.Div(
                 dbc.Tab(label="Traffic Signal Sensor", tab_id="tab-tf", labelClassName="text-success font-weight-bold", activeLabelClassName="text-danger"),
                 dbc.Tab(label="NDRS Sensor", tab_id="tab-ndrs", labelClassName="text-success font-weight-bold", activeLabelClassName="text-danger"),
                 dbc.Tab(label="Bluetooth Sensor", tab_id="tab-bt", labelClassName="text-success font-weight-bold", activeLabelClassName="text-danger"),
-                dbc.Tab(label="Data summary",tab_id="tab-sumall", labelClassName="text-success font-weight-bold", activeLabelClassName="text-danger")
+                dbc.Tab(label="Data Summary",tab_id="tab-sumall", labelClassName="text-success font-weight-bold", activeLabelClassName="text-danger")
                   ],
             id="tabs",
             active_tab="tab-info",
@@ -66,5 +66,7 @@ def switch_tab(tab_chosen):
 
 
 
-if __name__=='__main__':
-    app.run_server(debug= True)
+# if __name__=='__main__':
+#     app.run_server(debug= True)
+if __name__ == '__main__':
+    app.run_server(debug=True, host="0.0.0.0", port=8050)
